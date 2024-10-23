@@ -11,8 +11,8 @@ import {
 function App() {
   return (
     <>
-      <Header />
       <div className="container">
+      <Header />
         <SectionOne />
         <SectionTwo />
         <Testimonials />

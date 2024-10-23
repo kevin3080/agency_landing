@@ -4,7 +4,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
   font-family: 'Barlow', sans-serif;
-  font-size: 18px;
   font-weight: 600;
+  word-wrap: break-word;
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    width: 100vw;
+    min-height: 100vh;
+  }
 }
