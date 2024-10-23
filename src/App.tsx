@@ -7,13 +7,15 @@ import {
   SectionTwo,
   Testimonials,
 } from './components';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 function App() {
+  const { sectionOneRef, handleScroll } = useSmoothScroll();
   return (
     <>
       <div className="container">
-      <Header />
-        <SectionOne />
+        <Header onScroll={handleScroll} />
+        <SectionOne refScroll={sectionOneRef} />
         <SectionTwo />
         <Testimonials />
         <SectionImages />

@@ -1,10 +1,10 @@
 import { IMAGES } from "../Images/images";
 
-export const SectionOne = () => {
+export const SectionOne = ({refScroll}: {refScroll: React.MutableRefObject<HTMLParagraphElement | null>}) => {
   return (
     <section className="section-one">
       <div className="section-one-text">
-        <div className="section-one-text-container">
+        <div className="section-one-text-container" ref={refScroll}>
           <h2>Transform your brand</h2>
 
           <p>

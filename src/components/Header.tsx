@@ -1,6 +1,11 @@
 import { IconArrowDown } from "./icons/IconArrowDown"
 
-export const Header = () => {
+interface Props{
+  onScroll: () => void
+}
+
+export const Header = ({onScroll}: Props) => {
+
   return (
     <header>
         <div className="nav-container">
@@ -22,7 +27,7 @@ export const Header = () => {
         </div>
         <div className="hero">
           <h1>We are creatives</h1>
-          <IconArrowDown />
+          <IconArrowDown className="scroll" onScroll={onScroll} />
         </div>
       </header>
   )

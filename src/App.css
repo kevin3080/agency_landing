@@ -11,10 +11,48 @@ header{
   text-align: center;
 }
 
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
 
 .logo{
   font-weight: 700;
   font-size: 2em;
+}
+
+#menu{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#menuToggle a{
+  text-decoration: none;
+  color: #232323;
+}
+
+#menuToggle input{
+  display: none;
+}
+
+#menu li{
+  font-family: Fraunces, serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.1s;
+  color: white;
+}
+
+#menu li:hover{
+  border-radius: 25px;
+  background-color: #84d4fc;
+  color: white;
+
 }
 
 
@@ -30,8 +68,19 @@ header{
   svg{
     margin-top: 45px;
     cursor: pointer;
+
+    transition: all 0.3s ease;
   }
 }
+
+.hero svg:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.hero svg:active {
+  transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+
 
 
 
@@ -351,15 +400,15 @@ footer{
   header{
     text-align: start;
   }  
+
   .logo{
     display: inline-block;
     margin: 20px;
   }
   .nav{
-    position: absolute;
-    top: 2rem;
+    position: fixed;
+    top: 3.6rem;
     right: 2rem;
-
   }
     #menuToggle{
     display: block;
@@ -377,14 +426,6 @@ footer{
     transition: color 0.3s ease;
     width: 100%;
   }
-
-  #menuToggle a:hover{
-    border-radius: 100px;
-    color: #cdcdcd;
-    background-color: #232323;
-
-  }
-
 
   #menuToggle input{
     display: block;
@@ -445,6 +486,7 @@ footer{
   }
 
   #menu{
+    display: inline;
     position: fixed;
     width: 250px;
     padding: 50px;
@@ -452,6 +494,7 @@ footer{
     top: 0;
     right: -300px;
     background: #ededed;
+    border-radius: 4px;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -463,9 +506,19 @@ footer{
   }
 
   #menu li{
-    margin-left: 2.5rem;
     padding: 10px 0;
-    font-size: 22px;
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: margin-left .5s ease;
+    text-align: center;
+    color: black;
+  }
+
+  #menu li:hover{
+    margin-left: 1rem;
+    font-weight: 600;
+    background-color: #ffd302;
+    color: black;
   }
 
   #menuToggle input:checked ~ ul{
