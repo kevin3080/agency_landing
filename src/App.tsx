@@ -10,16 +10,16 @@ import {
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 function App() {
-  const { sectionOneRef, handleScroll } = useSmoothScroll();
+  const { sectionOneRef, sectionUpRef, scrollToTop, scrollToSectionOne } = useSmoothScroll();
   return (
     <>
       <div className="container">
-        <Header onScroll={handleScroll} />
+        <Header onScroll={scrollToSectionOne} refScroll={sectionUpRef} />
         <SectionOne refScroll={sectionOneRef} />
         <SectionTwo />
         <Testimonials />
         <SectionImages />
-        <Footer />
+        <Footer onScroll={scrollToTop} />
       </div>
     </>
   );

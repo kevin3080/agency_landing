@@ -1,10 +1,10 @@
 import { FeFacebook, MdiTwitter, PinterestIcon, PrimeInstagram } from "./icons";
 
-export const Footer = () => {
+export const Footer = ({onScroll}: {onScroll: () => void}) => {
   return (
     <footer>
       <div className="footer-content">
-        <strong>sunnyside</strong>
+        <strong onClick={onScroll}>sunnyside</strong>
         <ul>
           <li>About</li>
           <li>Services</li>

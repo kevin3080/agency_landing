@@ -2,12 +2,13 @@ import { IconArrowDown } from "./icons/IconArrowDown"
 
 interface Props{
   onScroll: () => void
+  refScroll: React.MutableRefObject<HTMLDivElement | null>
 }
 
-export const Header = ({onScroll}: Props) => {
+export const Header = ({onScroll, refScroll}: Props) => {
 
   return (
-    <header>
+    <header ref={refScroll}>
         <div className="nav-container">
           <span className="logo">sunnyside</span>
           <nav role="navigation" className="nav">
